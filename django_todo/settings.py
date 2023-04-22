@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -85,6 +84,9 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #     }
 # }
 
+DATABASES = {
+    'default': dj_database_url.parse('postgres://lxbskcgb:b8VgJ7ngjLM6PsfZNBBeGpl4pI8MXcVf@kandula.db.elephantsql.com/lxbskcgb')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
